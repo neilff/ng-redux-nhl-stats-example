@@ -1,0 +1,40 @@
+<html ng-app="app">
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/styles/styles.css">
+
+    <title>ng-redux-http</title>
+  </head>
+  <body>
+    <global-debug></global-debug>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12">
+          <select-data-source></select-data-source>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">
+          <team-selector></team-selector>
+        </div>
+        <div class="col-xs-9">
+          <div class="row">
+            <div class="col-xs-3">
+              <total-goals />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-3">
+              <top-scorer />
+            </div>
+            <div class="col-xs-3">
+              <top-points />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/static/bundle.js"></script>
+</html>

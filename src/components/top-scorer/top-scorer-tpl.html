@@ -1,0 +1,7 @@
+<p class="lead">Top Scorer</p>
+
+<ol>
+  <li ng-repeat="player in topScorer.statsData track by $index">
+    {{ player.playerFirstName }} {{ player.playerLastName }} ({{ player.goals }})
+  </li>
+</ol>
