@@ -1,4 +1,4 @@
-#g-redux-nhl-stats-example
+#ng-redux-nhl-stats-example
 
 #### This is currently WIP.
 
