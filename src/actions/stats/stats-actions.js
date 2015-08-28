@@ -33,7 +33,7 @@ export default function statsActions($ngRedux) {
     fetchRegularSeasonData
   };
 
-  return redux.bindActionCreators(actionCreator, $ngRedux.getStore().dispatch);
+  return redux.bindActionCreators(actionCreator, $ngRedux.dispatch);
 }
 
 statsActions.$inject = ['$ngRedux'];
