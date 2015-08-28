@@ -32,7 +32,7 @@ export default function filterActions($ngRedux) {
     removeFilter
   };
 
-  return redux.bindActionCreators(actionCreator, $ngRedux.getStore().dispatch);
+  return redux.bindActionCreators(actionCreator, $ngRedux.dispatch);
 }
 
 filterActions.$inject = ['$ngRedux'];

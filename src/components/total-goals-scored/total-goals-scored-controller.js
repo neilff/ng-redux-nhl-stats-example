@@ -1,16 +1,21 @@
 import R from 'ramda';
-import { teamFilter } from '../../selectors/team-selector';
+import {
+  teamFilter
+}
+from '../../selectors/team-selector';
 
 export default class TotalGoalsScoreController {
-  constructor($ngRedux) {
+  constructor($scope, $ngRedux) {
     this.totalGoals = null;
-
-    $ngRedux.connect(teamFilter, stats => {
-      this.totalGoals = stats.reduce((acc, elem) => {
-        return acc + elem.get('goals');
-      }, 0)
+    $ngRedux.connect($scope, state => {
+      return {
+        totalGoals: teamFilter(state).reduce((acc, elem) => {
+          return acc + elem.get('goals');
+        }, 0)
+      }
     });
+
   }
 };
 
-TotalGoalsScoreController.$inject = ['$ngRedux'];
+TotalGoalsScoreController.$inject = ['$scope', '$ngRedux'];

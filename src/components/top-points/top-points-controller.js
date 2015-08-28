@@ -1,11 +1,20 @@
 import R from 'ramda';
-import { teamFilter } from '../../selectors/team-selector';
+import {
+  teamFilter
+}
+from '../../selectors/team-selector';
 
 export default class TopPointsController {
-  constructor($ngRedux) {
+  constructor($scope, $ngRedux) {
     this.statsData = [];
 
-    $ngRedux.connect(teamFilter, stats => this.statsData = this.getTopPoints(15)(stats.toJS()));
+    $ngRedux.connect($scope, state => {
+
+      return {
+        statsData: this.getTopPoints(15)(teamFilter(state).toJS())
+      }
+    })
+
   }
 
   getTopPoints(count) {
@@ -16,4 +25,4 @@ export default class TopPointsController {
   }
 };
 
-TopPointsController.$inject = ['$ngRedux'];
+TopPointsController.$inject = ['$scope', '$ngRedux'];
