@@ -7,9 +7,7 @@ from '../../selectors/team-selector';
 export default class TopPointsController {
   constructor($scope, $ngRedux) {
     this.statsData = [];
-    var count=0;
     $ngRedux.connect($scope, state => {
-      console.log('count update',++count);
       return {
         statsData: this.getTopPoints(15)(teamFilter(state).toJS())
       }

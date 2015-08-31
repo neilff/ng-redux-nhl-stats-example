@@ -1,7 +1,9 @@
-<p class="lead">Top Points</p>
+<div class="list-graph">
+  <p class="lead">Top Points</p>
 
-<ol>
-  <li ng-repeat="player in topPoints.statsData track by $index">
-    {{ player.playerFirstName }} {{ player.playerLastName }} ({{ player.points }})
-  </li>
-</ol>
+  <ul>
+    <li ng-repeat="player in topPoints.statsData track by $index">
+      {{ player.playerFirstName }} {{ player.playerLastName }} <span class="pull-right">{{ player.points }}</span>
+    </li>
+  </ul>
+</div>

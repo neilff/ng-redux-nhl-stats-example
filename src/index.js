@@ -1,3 +1,5 @@
+require('./styles/_main.scss');
+
 import angular from 'angular';
 
 import ngRedux from 'ng-redux';

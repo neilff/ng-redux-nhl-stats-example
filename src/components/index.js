@@ -4,6 +4,8 @@ import topPoints from './top-points';
 import selectDataSource from './select-data-source';
 import teamSelector from './team-selector';
 import totalGoalsScored from './total-goals-scored';
+import totalShots from './total-shots-taken';
+import totalPims from './total-pims';
 
 export default angular
   .module('app.components', [
@@ -12,6 +14,8 @@ export default angular
     topPoints,
     selectDataSource,
     teamSelector,
-    totalGoalsScored
+    totalGoalsScored,
+    totalShots,
+    totalPims,
   ])
   .name;

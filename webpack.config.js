@@ -45,7 +45,7 @@ module.exports = {
       // Reference: https://github.com/jtangelder/sass-loader
       // Allow loading scss through js
       test: /\.scss$/,
-      loader: ExtractTextPlugin.extract('style-loader', sassLoaders.join('!')),
+      loader: 'style!css!sass'
     }, {
       // HTML LOADER
       // Reference: https://github.com/webpack/raw-loader
