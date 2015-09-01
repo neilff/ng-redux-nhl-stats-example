@@ -68,7 +68,7 @@ export default angular
       'TOR': 'Toronto Maple Leafs',
       'VAN': 'Vancouver Canucks',
       'WSH': 'Washington Capitals',
-      'WPG': 'Winnipeg Jets'
+      'WPG': 'Winnipeg Jets',
     });
 
     $translateProvider.preferredLanguage('en');

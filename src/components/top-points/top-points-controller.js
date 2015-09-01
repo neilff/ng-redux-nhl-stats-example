@@ -1,8 +1,7 @@
-import R from 'ramda';
 import {
   topPointsSelector
 }
-from '../../selectors/team-selector';
+from '../../selectors';
 
 export default class TopPointsController {
   constructor($scope, $ngRedux) {
@@ -11,9 +10,8 @@ export default class TopPointsController {
     $ngRedux.connect($scope, state => {
       return {
         statsData: topPointsSelector(state).toJS()
-      }
-    })
-
+      };
+    });
   }
 };
 

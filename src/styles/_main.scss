@@ -39,6 +39,17 @@ body {
   }
 }
 
+.card-panel {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  background-color: $blue;
+  width: 50%;
+  max-width: 600px;
+  z-index: 8;
+}
+
 .lead {
   text-transform: uppercase;
   font-size: 12px;

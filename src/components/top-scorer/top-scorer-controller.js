@@ -1,5 +1,5 @@
 import R from 'ramda';
-import { teamFilter, topScorerSelector } from '../../selectors/team-selector';
+import { teamFilter, topScorerSelector } from '../../selectors';
 
 export default class TopScorerController {
   constructor($scope,$ngRedux) {

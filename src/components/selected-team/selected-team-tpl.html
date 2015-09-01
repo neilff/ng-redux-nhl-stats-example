@@ -1,0 +1,9 @@
+<h1>{{ selectedTeam.team || 'All Teams' | translate }}</h1>
+<div ng-if="selectedTeam.teamLogos[selectedTeam.team].toLowerCase()">
+  <img
+    title="{{ selectedTeam.team || 'All Teams' | translate }}"
+    alt="{{ selectedTeam.team || 'All Teams' | translate }}"
+    class="team-logo"
+    height="150px"
+    ng-src="{{ selectedTeam.getTeamLogo(selectedTeam.team) }}">
+</div>

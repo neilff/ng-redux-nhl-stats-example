@@ -1,5 +1,5 @@
 import R from 'ramda';
-import {teamListSelector} from '../../selectors/team-selector';
+import {teamListSelector} from '../../selectors';
 
 export default class TeamSelectorController {
   constructor($scope, $ngRedux) {

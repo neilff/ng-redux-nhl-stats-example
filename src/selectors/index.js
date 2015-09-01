@@ -2,8 +2,9 @@ import R from 'ramda';
 import Immutable from 'immutable';
 import { createSelector, createSelectorCreator } from 'reselect';
 
-const statsSelector = state => state.stats.get('dataset');
-const teamSelector = state => state.router.getIn(['currentParams', 'team']);
+export const statsSelector = state => state.stats.get('dataset');
+export const teamSelector = state => state.router.getIn(['currentParams', 'team']);
+export const playerIdSelector = state => state.router.getIn(['currentParams', 'playerId']);
 
 const immutableCreateSelector = createSelectorCreator(Immutable.is);
 
@@ -44,5 +45,13 @@ export const topPointsSelector = immutableCreateSelector(
     return data
       .sort((a, b) => b.get('points') - a.get('points'))
       .take(5);
+  }
+);
+
+export const currentPlayerIdSelector = immutableCreateSelector(
+  [playerIdSelector, statsSelector],
+  (playerId, data) => {
+    return data
+      .find(i => i.get('playerId') === parseInt(playerId));
   }
 );

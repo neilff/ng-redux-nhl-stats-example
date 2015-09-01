@@ -2,7 +2,7 @@ import R from 'ramda';
 import {
   teamFilter
 }
-from '../../selectors/team-selector';
+from '../../selectors';
 
 export default class TotalPimsController {
   constructor($scope, $ngRedux) {

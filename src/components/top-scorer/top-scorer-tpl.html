@@ -2,7 +2,9 @@
   <p class="lead">Top Scorer</p>
 
   <ul>
-    <li ng-repeat="player in topScorer.statsData track by $index">
+    <li
+      ui-sref="app.card({playerId: player.playerId})"
+      ng-repeat="player in topScorer.statsData track by $index">
       {{ player.playerFirstName }} {{ player.playerLastName }} <span class="pull-right">{{ player.goals }}</span>
     </li>
   </ul>
