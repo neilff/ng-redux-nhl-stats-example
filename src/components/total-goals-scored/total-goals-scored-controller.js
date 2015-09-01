@@ -7,6 +7,7 @@ from '../../selectors/team-selector';
 export default class TotalGoalsScoreController {
   constructor($scope, $ngRedux) {
     this.totalGoals = null;
+
     $ngRedux.connect($scope, state => {
       return {
         totalGoals: teamFilter(state).reduce((acc, elem) => {

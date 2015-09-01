@@ -1,18 +1,14 @@
-<div>
+<div class="team-selector">
   <p class="lead">Filter by Team</p>
-  <div
+  <ul
     class="btn-group-vertical"
     role="group">
-    <button
-      type="button"
-      class="btn btn-default"
-      ng-repeat="team in teamSelector.teams track by $index"
-      ng-class="{
-        'btn-default': teamSelector.activeTeam !== team,
-        'btn-primary': teamSelector.activeTeam === team,
-      }"
-      ng-click="teamSelector.addFilter(team)">
-      {{ team }}
-    </button>
-  </div>
+    <li ng-repeat="team in teamSelector.teams track by $index">
+      <a
+        ui-sref="app({team: team})"
+        ui-sref-active="active">
+        {{ team | translate }}
+      </a>
+    </li>
+  </ul>
 </div>

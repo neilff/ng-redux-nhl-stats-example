@@ -6,6 +6,7 @@ import teamSelector from './team-selector';
 import totalGoalsScored from './total-goals-scored';
 import totalShots from './total-shots-taken';
 import totalPims from './total-pims';
+import main from './main';
 
 export default angular
   .module('app.components', [
@@ -17,5 +18,6 @@ export default angular
     totalGoalsScored,
     totalShots,
     totalPims,
+    main,
   ])
   .name;
